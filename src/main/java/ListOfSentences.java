@@ -9,8 +9,25 @@ public class ListOfSentences {
         list.add(sentence);
     }
 
-    public void getSentence(Integer index){
-        list.get(index);
+    public String getSentence(Integer index){
+        return list.get(index);
+    }
+
+    public int sizeOfList(){
+       return list.size();
+    }
+
+    public int numberOfWords(String sentence) {
+        int words = 1;
+        char space = ' ';
+        char nextChar;
+        for (int i = 0; i <= sentence.length()-1; i++) {
+            nextChar = sentence.charAt(i);
+            if (nextChar == space) {
+                words++;
+            }
+        }
+        return words;
     }
 
     @Override
